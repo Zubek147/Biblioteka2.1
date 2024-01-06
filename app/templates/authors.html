@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista Autorów</h1>
+        
+        <ul class="list-group">
+            {% for author in authors %}
+            <li class="list-group-item">
+                <strong>{{ author.name }}</strong><br>
+                Data urodzenia: {{ author.birth_date }}<br>
+                Narodowość: {{ author.nationality }}
+            </li>
+            {% endfor %}
+        
+        <a href="{{ url_for('routes.index') }}" class="btn">Biblioteka</a>
+        </ul>
+    </div>
+</body>
+</html>

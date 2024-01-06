@@ -1,0 +1,114 @@
+/* styles.css */
+
+/* Resetowanie domyślnych styli przeglądarki */
+body, h1, ul, li, form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Podstawowy układ strony */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    margin-top: 20px;
+  }
+  
+  /* Przyciski i formularze */
+  a {
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  /* Listy kosztów */
+  .list-group {
+    margin-top: 20px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .list-group-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .list-group-item .expense-description {
+    font-weight: bold;
+  }
+  
+  /* Formularz dodawania kosztu */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Ikony FontAwesome */
+  .fa {
+    margin-right: 10px;
+  }
+  
+  /* Responsywność */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  

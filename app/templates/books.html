@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista Książek</h1>
+        
+        <ul class="list-group">
+            {% for book in books %}
+            <li class="list-group-item">
+                <strong>{{ book.title }}</strong><br>
+                Autor: {{ book.author }}<br>
+                Rok wydania: {{ book.year }}<br>
+                Gatunek: {{ book.genre }}<br>
+                Opis: {{ book.description }}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('routes.index') }}" class="btn">Biblioteka</a>
+    </div>
+</body>
+</html>

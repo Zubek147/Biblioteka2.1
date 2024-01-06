@@ -1,0 +1,80 @@
+# Domowa Biblioteka
+
+## Opis
+
+Aplikacja "Domowa Biblioteka" to prosty system do zarządzania książkami i autorami. 
+Pozwala na dodawanie nowych autorów, książek, oraz śledzenie ich statusu (wypożyczona, w bibliotece, itp.).
+
+## Instalacja
+
+1. Pobierz kod źródłowy z repozytorium:
+
+    ```bash
+    git clone https://github.com/TWOJA_NAZWA_UZYTKOWNIKA/REPOZYTORIUM.git
+    ```
+
+2. Przejdź do katalogu projektu:
+
+    ```bash
+    cd Biblioteka2.0-master
+    ```
+
+3. Zalecane jest utworzenie wirtualnego środowiska Pythona przed instalacją zależności:
+
+    ```bash
+    python -m venv venv
+    ```
+
+4. Aktywuj wirtualne środowisko:
+
+    - Windows:
+
+        ```bash
+        .\venv\Scripts\activate
+        ```
+
+    - Linux/Mac:
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+5. Zainstaluj zależności:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+6. W razie potrzeby zainstaluj pakiety:
+   ```bash
+   pip install Flask
+   pip install flask_sqlalchemy
+   pip install flask_migrate
+
+
+## Uruchamianie
+
+1. Uruchom aplikację:
+
+    ```bash
+    python run.py
+    ```
+
+2. Otwórz przeglądarkę i przejdź do [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+## Używanie
+
+- Dodaj nowego autora: Przejdź do [http://127.0.0.1:5000/add_author](http://127.0.0.1:5000/add_author)
+
+- Dodaj nową książkę: Przejdź do [http://127.0.0.1:5000/add_book](http://127.0.0.1:5000/add_book)
+
+- Zarządzaj książkami i autorami: Przejdź do [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+- Dodaną książkke przy pomocy odpowiedniego guzika można dodać do "Biblioteki" lub ustawić jej status "Wypożyczona"
+
+## Zakończenie pracy
+
+Aby zakończyć pracę z aplikacją, możesz zamknąć serwer Flask, naciskając `Ctrl+C` w terminalu. Następnie możesz zdeaktywować wirtualne środowisko:
+
+```bash
+deactivate

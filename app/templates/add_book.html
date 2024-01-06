@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dodaj Książkę</h1>
+        
+        <form action="/add_book" method="post" class="form-group">
+            <label for="title">Tytuł:</label>
+            <input type="text" id="title" name="title" class="form-control" required>
+            {% if error and error.field == 'title' %}
+                <p style="color: red;">{{ error.message }}</p>
+            {% endif %}
+            
+            <label for="author">Autor:</label>
+            <select id="author" name="author" class="form-control" required>
+                <option value="" disabled selected>Wybierz autora</option>
+                {% for author in authors %}
+                    <option value="{{ author.id }}">{{ author.name }}</option>
+                {% endfor %}
+            </select>
+            {% if error and error.field == 'author' %}
+                <p style="color: red;">{{ error.message }}</p>
+            {% endif %}
+            
+            <label for="year">Rok wydania:</label>
+            <input type="text" id="year" name="year" class="form-control" required>
+            {% if error and error.field == 'year' %}
+                <p style="color: red;">{{ error.message }}</p>
+            {% endif %}
+            
+            <label for="genre">Gatunek:</label>
+            <input type="text" id="genre" name="genre" class="form-control" required>
+            {% if error and error.field == 'genre' %}
+                <p style="color: red;">{{ error.message }}</p>
+            {% endif %}
+            
+            <label for="description">Opis:</label>
+            <textarea id="description" name="description" class="form-control" required></textarea>
+            {% if error and error.field == 'description' %}
+                <p style="color: red;">{{ error.message }}</p>
+            {% endif %}
+
+            <button type="submit" class="btn">Dodaj Książkę</button>
+        </form>
+    </div>
+</body>
+</html>
