@@ -152,12 +152,13 @@ def toggle_book_status(book_id):
             book.loaned = False
             flash('Książka została dodana do W Bibliotece.', 'success')
         else:
-            book.loaned = True
-            flash('Książka została dodana do Wypożyczonych.', 'success')
+            # Dodaj ten warunek, aby obsłużyć przypadki, gdy książka nie jest ani wypożyczona, ani w bibliotece
+            book.owned = True
+            book.loaned = False
+            flash('Książka została dodana do W Bibliotece.', 'success')
 
         db.session.commit()
     else:
-        # Tutaj dodaj kod obsługujący przypadek, gdy nie znaleziono książki
         flash('Nie znaleziono książki o podanym identyfikatorze.', 'danger')
 
     return redirect(url_for('routes.index'))
